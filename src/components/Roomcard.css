@@ -1,0 +1,70 @@
+.Uppercard {
+    width: 18rem;
+    margin-bottom: 23px;
+}
+
+.Lowercard {
+    width: 18rem;
+
+}
+
+.cardTitle {
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.room-but {
+    width: 300px;
+    height: 50px;
+
+}
+
+text {
+    font-size: x-large;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .d-flex {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .Uppercard,
+    .Lowercard {
+      width: 80%;
+    }
+  
+    .cardTitle {
+      font-size: 24px;
+    }
+  
+    .room-but {
+      width: 100%;
+    }
+  
+    .img-fluid {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  
+  @media only screen and (max-width: 480px) {
+    .Uppercard,
+    .Lowercard {
+      width: 100%;
+    }
+  
+    .cardTitle {
+      font-size: 20px;
+    }
+  }

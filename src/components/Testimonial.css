@@ -1,0 +1,11 @@
+.testimonial{
+    background-color: rgb(234, 238, 242);
+    /* margin-top: 20px; */
+    /* position: relative; */
+    padding-top: 40px;
+}
+.testText{
+    font-family: cursive;
+    font-size: 20px;
+    color: rgb(98, 97, 97);
+}

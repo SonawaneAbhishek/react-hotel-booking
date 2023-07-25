@@ -1,0 +1,21 @@
+.roomheader{
+    position: relative;
+    /* border: 1px solid red; */
+}
+
+.roomHeaderImg{
+    /* position: relative; */
+}
+.roomHeaderText{
+    position: absolute;
+    color: white;
+    top :100px;
+    left:70px;
+    /* border:1px solid red; */
+
+}
+.menuHeading{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+}

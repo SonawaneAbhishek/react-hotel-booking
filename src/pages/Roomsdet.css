@@ -1,0 +1,105 @@
+.listContainer{
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
+    
+}
+.listWrapper{
+    
+    width: 100%;
+    max-width: 1024px;
+    display: flex;
+    /* justify-content: center;
+    margin-top: 70px; */
+    gap: 20px;
+
+}
+.bookingSheet{
+    flex:3;
+}
+.upperSearch{
+    background-color: #F5F5F5;
+    padding: 10px;
+    border-radius: 10px;
+}
+.siTitle{
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.siItem{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+.siItem>label{
+    margin-bottom: 10px;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+.siItem>span{
+    height: 50px;
+    padding: 10px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.peopleDrop{
+    height: 50px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+
+.roomDetails{
+    flex: 5;
+}
+.lowerSearch{
+    background-color: #F5F5F5;
+    padding: 10px;
+    border-radius: 10px;
+}
+.planList{
+    display: flex;
+    /* flex */
+}
+
+.planText{
+    padding: 5px;
+    background-color:white;
+    margin-right: 5px;
+
+}
+.roomDetailText{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif';
+}
+.detailHead{
+    font-weight: 500px;
+}
+.premiumPrice{
+    margin-left: 130px;
+    margin-top: 10px;
+
+
+}
+.pricing{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 20px;
+    color: #555555;
+}
+.firstPara{
+    color: #555555;
+    margin-top: 40px;
+
+}
+.roomDetailText>p{
+    color: #555555;
+    font-size: 17px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif';
+}
