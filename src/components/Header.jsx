@@ -53,8 +53,6 @@ function Header() {
                       <FontAwesomeIcon icon={faBed} className='headerIcon' />
                       <input type="text" placeholder='Where are u going' className='headerInput' />
                     </div> */}
-
-
           <div className="headerSearchItem">
             <FontAwesomeIcon icon={faCalendarDays} className='headerIcon' />
 
@@ -89,12 +87,9 @@ function Header() {
               {/* <Link to="/rooms" ><button type="button" class="btn btn-outline-dark buton" >Check Availability</button></Link>  */}
             </div>
           </div>
-
-
         </div >
-
-
       </div>
+      
 
       <div style={{ backgroundColor: "#f4f1ec" }}>
         <div style={{ paddingTop: "100px" }} className="col-md-12 d-flex container ">
