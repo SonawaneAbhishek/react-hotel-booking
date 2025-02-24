@@ -9,13 +9,18 @@ function Allrooms() {
 
     const navigate = useNavigate();
     const location = useLocation();
-    // console.log(location.state)
-    const locationdate = (location.state.date) 
-    const handleBook = ()=>{
-        navigate('/room-detail',{state :{locationdate}})
+ 
+    // const locationdate = (location.state.date) ;
+    const locationdate = location.state?.date || [];
+
+    // const handleBook = ()=>{
+    //     navigate('/room-detail',{state :{locationdate }});
+    // }
+
+    const handleBook = (roomTitle)=>{
+        navigate('/room-detail',{state :{locationdate ,roomTitle}});
     }
-    
-    
+        
     return (
         <div>
             <div className='container my-5'>
@@ -29,8 +34,9 @@ function Allrooms() {
                                 <Card.Text style={{ color: "red" }}>
                                     <b>{room.rromCost}</b>
                                 </Card.Text>
-                                {/* <Link to="/room-detail" > <Button variant="btn btn-outline-primary">More Details</Button></Link>  */}
-                                <button className='btn btn-outline-primary' onClick={handleBook}>More Details</button>
+
+                                {/* <button className='btn btn-outline-primary' onClick={handleBook}>More Details</button> */}
+                                <button className='btn btn-outline-primary' onClick={() => handleBook(room.roomTitle)}>More Details</button>
                             </Card.Body>
                         </Card>
                     </div>

@@ -3,8 +3,44 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
+import { Link, useNavigate } from 'react-router-dom';
+import { useContext, useState } from 'react';
+import {UserContext} from "../App";
+import swal from 'sweetalert';
 
 function Login() {
+  const {state,dispatch} = useContext(UserContext);
+
+  const navigate = useNavigate();
+
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const loginUser = async (e) => {
+    e.preventDefault();
+
+    const res = await fetch('/login', {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        email: email, password: password
+      })
+    });
+
+    const data = res.json();
+    
+
+    if (res.status === 400  || !data) {
+      swal("Invalid Credentials","","error");
+    } else {
+      dispatch({type : "USER" , payload :true});
+      swal("WELCOME","Login Succesfull");
+      navigate("/");
+    }
+  }
+
   return (
     <div>
       <Navbar />
@@ -12,17 +48,23 @@ function Login() {
       <body class="d-flex align-items-center py-4 " style={{ backgroundColor: "#f5f3f0" }}>
 
         <main style={{ marginLeft: "600px", marginRight: "600px" }} class="form-signin w-100  ">
-          <form>
-            <center><FontAwesomeIcon style={{height:"35px",marginBottom:"20px"}} icon={faUser} /></center>
-            <h1 class="h3 mb-3 fw-normal text-center ">Please sign in</h1>
+          <form method='POST'>
+            <center><FontAwesomeIcon style={{ height: "35px", marginBottom: "20px" }} icon={faUser} /></center>
+            <h1 class="h3 mb-3 fw-normal text-center ">Please Sign In</h1>
 
             <div class="form-floating">
-              <input type="email" class="form-control" id="floatingInput" required placeholder="name@example.com" />
+              <input type="email" class="form-control" name='email' id="email" required
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="name@example.com" />
               <label for="floatingInput">Email address</label>
             </div>
             <br />
             <div class="form-floating">
-              <input type="password" class="form-control" id="floatingPassword" required placeholder="Password" />
+              <input type="password" class="form-control" name='password' id="password" required
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                placeholder="Password" />
               <label for="floatingPassword">Password</label>
             </div>
 
@@ -32,11 +74,13 @@ function Login() {
                 Remember me
               </label>
             </div>
-            <button class="btn btn-primary w-100 py-2" type="submit">Sign in</button>
-            {/* <p class="mt-5 mb-3 text-body-secondary">© 2017–2023</p> */}
+
+            <button class="btn btn-primary w-100 py-2 my-4" onClick={loginUser} type="submit">Sign in</button>
+            {/* <Link to="/signup">  <button class="btn btn-primary w-100 py-2 " type="submit">Create a Account</button></Link> */}
+            <p>Don't have an account? <Link to="/signup">Create an Account</Link></p>
+
           </form>
         </main>
-        {/* <script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script> */}
 
 
 

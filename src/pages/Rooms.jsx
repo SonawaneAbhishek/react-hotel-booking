@@ -4,13 +4,8 @@ import Footer from '../components/Footer';
 import Menuheader from '../components/Menuheader';
 import Allrooms from '../components/Allrooms';
 
-
-
 function Rooms() {
-  const roomStyle={
-    
-  }
-
+  
   return (
     <div>
       <Navbar />

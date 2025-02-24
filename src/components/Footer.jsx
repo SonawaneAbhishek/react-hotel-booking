@@ -15,6 +15,8 @@ function Footer() {
                 <p class="text-center text-muted">© 2023 Abhishek Hotel, developed by Abhishek Sonawane</p>
             </footer>
         </div>
+
+
     )
 }
 

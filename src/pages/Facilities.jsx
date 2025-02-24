@@ -6,14 +6,21 @@ import Menuheader from '../components/Menuheader';
 import Newalbum from '../components/Newalbum';
 
 function Facilities() {
+
   return (
     <div>
-        <Navbar/>
-        <Menuheader menuTitle="Facilities" />
-        {/* <center><h1>FACILITIES<hr className='line-hr' /></h1></center> */}
-        {/* <Album/> */}
-        <Newalbum/>
-        <Footer/>
+      <Navbar />
+      <Menuheader menuTitle="Facilities" />
+
+      <div className="roomheading container my-5">
+        <p className='text-center' style={{ color: "#EE786C" }}>FACILITIES</p>
+        <h1 className='text-center' style={{ fontFamily: "Noto Serif ,serif", fontSize: "30px", fontWeight: "600" }}>Our Services & facilities</h1>
+      </div>
+
+      {/* <Album/> */}
+
+      <Newalbum />
+      <Footer />
     </div>
   )
 }

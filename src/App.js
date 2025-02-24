@@ -10,31 +10,35 @@ import Register from './pages/Register';
 import Rooms from './pages/Rooms';
 import Roomdetail from './pages/Roomdetail';
 import Roomsdet from './pages/Roomsdet';
+import Logout from './pages/Logout';
+import { createContext, useReducer } from 'react';
+import { initialState ,reducer} from './reducer/UseReducer';
 
 
+export const UserContext = createContext();
 
 
 function App() {
-  return (
-    // <div>
-    //   <Home/>
-    //   {/* <About/> */}
-    //   {/* <Facilities/> */}
-    // </div>
 
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home/>}/>
-        <Route path="/about" element={<About/>}/>
-        <Route path="/rooms" element={<Rooms/>}/>
-        <Route path="/facilities" element={<Facilities/>}/>
-        <Route path="/contact-us" element={<Contactus/>}/>
-        <Route path="/login" element={<Login/>}/>
-        <Route path="/register" element={<Register/>}/>
-        <Route path="/room-detail" element={<Roomdetail/>}/>
-        <Route path="/room-det" element={<Roomsdet/>}/>
-      </Routes>
-    </BrowserRouter>
+const [state, dispatch] = useReducer(reducer, initialState);
+
+  return (
+    <UserContext.Provider value={{state ,dispatch}}>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/rooms" element={<Rooms />} />
+          <Route path="/facilities" element={<Facilities />} />
+          <Route path="/contact-us" element={<Contactus />} />
+          <Route path="/signin" element={<Login />} />
+          <Route path="/signup" element={<Register />} />
+          <Route path="/logout" element={<Logout />} />
+          <Route path="/room-detail" element={<Roomdetail />} />
+          <Route path="/room-det" element={<Roomsdet />} />
+        </Routes>
+      </BrowserRouter>
+    </UserContext.Provider>
   );
 }
 

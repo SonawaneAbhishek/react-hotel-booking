@@ -52,7 +52,7 @@ function Roomcard() {
                         <Card className='Lowercard' >
                             <Card.Img variant="top"class="img-fluid"  src={honeymoon} />
                             <Card.Body style={{ paddingBottom: "0px" }}>
-                                <Card.Title className='cardTitle'>Honeymoon Room</Card.Title>
+                                <Card.Title className='cardTitle'>Couple Room</Card.Title>
                             </Card.Body>
                         </Card>
                     </div>
@@ -60,10 +60,7 @@ function Roomcard() {
                 
             </div>
             
-            {/* <center><Link className="nav-link active" aria-current="page" to="/rooms"><button type="button" class="btn btn-outline-warning room-but"><text>View all Rooms</text><FontAwesomeIcon style={{marginLeft:"10px",height:"20px"}} icon={faCircleArrowRight} /></button></Link></center> */}
-
-
-
+            <center><Link className="nav-link active" aria-current="page" to="/rooms"><button type="button" class="btn btn-outline-warning room-but"><text>View all Rooms</text><FontAwesomeIcon style={{marginLeft:"10px",height:"20px"}} icon={faCircleArrowRight} /></button></Link></center>
 
         </div>
     )

@@ -12,11 +12,15 @@ import Testimonials from '../components/Testimonials';
 function About() {
     return (
         <div >
-            <Navbar />
-            <Menuheader menuTitle="About Us"  />
-            <hr/>
+            <Navbar />  
+            <Menuheader menuTitle="About Us" />
+
+            <div className="roomheading container my-5">
+                <p className='text-center' style={{ color: "#EE786C" }}>ABOUT US</p>
+                <h1 className='text-center' style={{ fontFamily: "Noto Serif ,serif", fontSize: "30px", fontWeight: "600" }}>Everything that we do</h1>
+            </div>
+            <hr />
             
-            {/* <center><h1 className='pageHeading'>ABOUT US<hr className='line-hr' /></h1></center> */}
             <Aboutright />
             <Aboutleft />
             <div className="container my-5">
@@ -31,8 +35,8 @@ function About() {
                     </div>
                 </div>
             </div>
-            
-            <Testimonials/>
+
+            <Testimonials />
             <Footer />
 
         </div>
